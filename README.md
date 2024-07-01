@@ -1,4 +1,9 @@
 # JSX Client Transpiler
+
+![Static Badge](https://img.shields.io/badge/JSX-Transpiler-client)
+![Static Badge](https://img.shields.io/badge/HTML-CSS-user?color=%2340E0D0)
+![Static Badge](https://img.shields.io/badge/Javascript-SPA-user?color=%230096FF)
+
 A simple tool to run JSX directly in the browser! This means we can now use it on any static sites, SPAs, or server-side languages like PHP and Node.js. 
 
 > This project started as a fun learning journey, and I’m excited to open it up to the community. Your feedback and comments are highly appreciated. If you’re interested in collaborating, feel free to fork the repo, make changes, test, and create a pull request. Let’s innovate and learn together! 💡🔧

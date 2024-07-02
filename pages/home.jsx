@@ -1,37 +1,48 @@
 export default function Home() {
 
+    function getRandomNumber() {
+        return Math.floor(Math.random() * 9) + 1;
+    }
+
     const onButtonClick = (e) => {
 
         let message = document.getElementById('message-elm');
         message.innerHTML = "Checking...";
-        fetch('https://jsonplaceholder.typicode.com/todos/2')
+        fetch(`https://jsonplaceholder.typicode.com/users/${getRandomNumber()}`)
             .then(response => response.json())
             .then(json => {
-                message.innerHTML = json.title;
+                message.innerHTML = `<h1>Hello ${json.name}</h1>${json.email}`;
             })
             .catch(err => {
                 message.innerHTML = "Failde to load data";
             })
 
-    }
+    };
+
+    document.title = "Demo App - JSX Client Transpiler";
 
     return (
         <div>
-            <h3
-                id="message-elm"
-                className="text-secondary"
-                style={{
-                    fontSize: "20px",
-                    margin: "15px 0"
-                }}>
-                Click On Button to get data from jsonplaceholder API
-            </h3>
-            <button
-                type="button" 
-                class="btn btn-primary"
-                onClick={(e) => onButtonClick}>
-                Featch Data From Fake API
-            </button>
+            <div className="container-fluid h-100">
+                <div className="row align-items-center h-100">
+                    <div className="col-12 text-center poppins-regular">
+                        <div
+                            id="message-elm"
+                            className="text-secondary"
+                            style={{
+                                fontSize: "20px"
+                            }}>Click On Button to Get Random Data
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-primary mt-4"
+                            onClick={(e) => onButtonClick}>
+                            Get Random Data
+                        </button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 }

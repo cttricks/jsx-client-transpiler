@@ -39,7 +39,7 @@ async function JSXContentExtractor(data) {
     content = content.replace(htmlMatch[0][0], '');
 
     //Format style codes if available in HTML content
-    const styleMatch = [...htmlContent.match(regex.css)];
+    const styleMatch = htmlContent.match(regex.css) || [];
     if (styleMatch.length > 0) {
 
         const halper = document.createElement('div');
@@ -64,7 +64,7 @@ async function JSXContentExtractor(data) {
     }
 
     //Format onClick attribute
-    const onClickMatch = [...htmlContent.match(regex.click)];
+    const onClickMatch = htmlContent.match(regex.click) || [];
     if (onClickMatch) {
 
         onClickMatch.forEach((item) => {

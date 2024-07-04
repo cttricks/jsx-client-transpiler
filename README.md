@@ -41,7 +41,6 @@ The process behind this transpiler is straightforward and easy to understand. He
 - **Rendering HTML**: Finally, it loads the HTML content into the specified element on the page.
 
 I highly encourage you to give it a try to see how it works in action.
-> ⚠️ Currently, you cannot import any components in your JSX file. It works as a standalone solution.
 
 ## Dependencies and Styling
 This project leverages [Bootstrap CSS](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for styling and [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to demonstrate JSX elements in action within the browser. Here's a brief overview of these dependencies:

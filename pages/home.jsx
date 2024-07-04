@@ -14,7 +14,7 @@ export default function Home() {
                 message.innerHTML = `<h1>Hello ${json.name}</h1>${json.email}`;
             })
             .catch(err => {
-                message.innerHTML = "Failde to load data";
+                message.innerHTML = "Failed to load data";
             })
 
     };
@@ -39,6 +39,7 @@ export default function Home() {
                             onClick={(e) => onButtonClick}>
                             Get Random Data
                         </button>
+                        <div className="mt-4">Go to <a target="#root" href="./pages/components.jsx">Components Page</a></div>
                     </div>
                 </div>
 
